@@ -27,14 +27,13 @@
 				<section>Slide 1</section>
 				<section>Slide 2</section>
 				<section>
-<object id="demo-tiger" type="image/svg+xml" data="images/qaqc_006.svg" style="width: 1024px; height: 700px; border:1px solid black; ">Your browser does not support SVG</object>
+					<object id="demo-tiger" type="image/svg+xml" data="images/qaqc_006.svg" style="width: 1024px; height: 700px; border:1px solid black; ">Your browser does not support SVG</object>
 				</section>
 			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.js"></script>
-
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -48,27 +47,17 @@
 					{ src: 'svg-pan-zoom.js' }
 				]
 			});
+
+
 		</script>
-
-
-
-
-
-    <script>
-      // Don't use window.onLoad like this in production, because it can only listen to one function.
-      window.onload = function() {
-        svgPanZoom('#demo-tiger', {
-          zoomEnabled: true,
-          controlIconsEnabled: true
-        });
-      };
-    </script>
-
-
-
-
-
-
-
+		<script>
+			// Don't use window.onLoad like this in production, because it can only listen to one function.
+			window.onload = function() {
+				svgPanZoom('#demo-tiger', {
+					zoomEnabled: true,
+					controlIconsEnabled: true
+				});
+			};
+		</script>
 	</body>
 </html>
