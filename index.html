@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="plugin/title-footer/title-footer.css">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -30,10 +30,25 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
+				<center>
+					<div style="display: inline-block;width: 100%;height: 28px;position: relative;top: 0px;color: #0070C0;background-color: #0070C0;border:1px solid#B9D8EE;  style="outline:1px solid red"">
+					</div>
+				</center>
+				<section data-state="header1">
+					<div style="z-index: 11; text-align: center; color: rgb(0, 112, 192);" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
+						<h1>Quality</h1>
+						<h2>QA, QC</h2>
+						<h4>and</h4>
+						<h2>Testing</h2>
+						<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+						Darrow Cole - Aug 30, 2016
+					</div>
+				</section>
 				<section>Slide 2</section>
-				<section>
-					<object id="demo-tiger" type="image/svg+xml" data="images/qaqc_006.svg" style="width: 1024px; height: 700px; border:1px solid black; ">Your browser does not support SVG</object>
+				<section style="outline: 0px solid red">
+					<div id = "div2" style="overflow:auto; outline:2px solid gray; height: 100%; width: 100%; resize: vertical; position: relative" >
+						<object id="demo-tiger" type="image/svg+xml" data="images/qaqc_007b.svg" style="height: 100%; width: 75%; position: relative; border:0px solid black">Your browser does not support SVG</object>
+					</div>
 				</section>
 			</div>
 		</div>
@@ -45,15 +60,13 @@
 			Reveal.initialize({
 				history: true,
 
-				chalkboard: { 
+				chalkboard: {
 					// optionally load pre-recorded chalkboard drawing from file
 					src: "chalkboard.json",
+				        toggleChalkboardButton: { left: "60px", bottom: "30px", top: "auto", right: "auto" },
+				        toggleNotesButton: { left: "90px", bottom: "30px", top: "auto", right: "auto" },
 					},
 				// More info https://github.com/hakimel/reveal.js#dependencies
-    chalkboard: { 
-        toggleChalkboardButton: { left: "60px", bottom: "30px", top: "auto", right: "auto" },
-        toggleNotesButton: { left: "90px", bottom: "30px", top: "auto", right: "auto" },
-    },
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
@@ -73,14 +86,16 @@
 				}
 			});
 
-
 		</script>
 		<script>
 			// Don't use window.onLoad like this in production, because it can only listen to one function.
 			window.onload = function() {
-				svgPanZoom('#demo-tiger', {
+				var panZoomTiger = svgPanZoom('#demo-tiger', {
 					zoomEnabled: true,
 				});
+				panZoomTiger.fit();
+				panZoomTiger.center();
+				panZoomTiger.zoomAtPoint(2.4, {x: 400, y: 0});
 			};
 		</script>
 	</body>
