@@ -26,35 +26,109 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
+		<!-- Include Reveal up here -->
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
 	</head>
 	<body>
+
 		<div class="reveal">
 			<div class="slides">
 				<center>
 					<div style="display: inline-block;width: 100%;height: 28px;position: relative;top: 0px;color: #0070C0;background-color: #0070C0;border:1px solid#B9D8EE;  style="outline:1px solid red"">
 					</div>
 				</center>
+
+				<!-- TITLE -->
+				<!-- TITLE -->
+				<!-- TITLE -->
 				<section data-state="header1">
-					<div style="z-index: 11; text-align: center; color: rgb(0, 112, 192);" class="sl-block-content" data-placeholder-tag="h1" data-placeholder-text="Title Text">
-						<h1>Quality</h1>
-						<h2>QA, QC</h2>
-						<h4>and</h4>
-						<h2>Testing</h2>
-						<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
-						Darrow Cole - Aug 30, 2016
-					</div>
+					<h1>Quality</h1>
+					<h2>QA, QC</h2>
+					<h4>and</h4>
+					<h2>Testing</h2>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					Darrow Cole - Aug 30, 2016
 				</section>
-				<section>Slide 2</section>
-				<section style="outline: 0px solid red">
-					<div id = "div2" style="overflow:auto; outline:2px solid gray; height: 100%; width: 100%; resize: vertical; position: relative" >
+
+
+				<!-- Slide 1 -->
+				<!-- Slide 1 -->
+				<!-- Slide 1 -->
+				<section data-state="header1">
+					<h1>Testing</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">The process of exercising a<br><b><i>Thing</i></b><br> and watching for failure</p>
+					<p style="color:#0070C0;font-size:66px;">
+						<ul>
+							<li class="fragment">Our "<i>Thing</i>" is Software
+							<li class="fragment">Testing helps us deliver quality software
+							<li class="fragment">Testing predates software
+						</ul>
+					</p>
+				</section>
+
+
+
+
+
+				<section data-state="transitions" id="transitions" style="outline: 0px solid red">
+					<div id='transitionscontainer' style="outline:2px solid gray; height: 100%; width: 100%; resize: vertical; position: relative" >
 						<object id="demo-tiger" type="image/svg+xml" data="images/qaqc_007b.svg" style="height: 100%; width: 75%; position: relative; border:0px solid black">Your browser does not support SVG</object>
 					</div>
+
+					<script type="text/javascript">
+						Reveal.addEventListener( 'transitions', function() {
+							update();
+							function update() {
+//								alert("ggg");
+				var panZoomTiger = svgPanZoom('#demo-tiger', {
+					zoomEnabled: true,
+				});
+				panZoomTiger.fit();
+				panZoomTiger.center();
+				panZoomTiger.zoomAtPoint(0.4, {x: 400, y: 0});
+							}
+						} );
+
+					</script>					
+
 				</section>
+
+
+				<section data-state="transitions2" id="transitions2" style="outline: 0px solid red">
+					<div id='transitionscontainer2' style="outline:2px solid gray; height: 100%; width: 100%; resize: vertical; position: relative" >
+						<object id="demo-tiger2" type="image/svg+xml" data="images/qaqc_007b.svg" style="height: 100%; width: 75%; position: relative; border:0px solid black">Your browser does not support SVG</object>
+					</div>
+
+					<script type="text/javascript">
+						Reveal.addEventListener( 'transitions2', function() {
+							update2();
+							function update2() {
+//								alert("hhh");
+				var panZoomTiger2 = svgPanZoom('#demo-tiger2', {
+					zoomEnabled: true,
+				});
+				panZoomTiger2.fit();
+				panZoomTiger2.center();
+				panZoomTiger2.zoomAtPoint(2.4, {x: 400, y: 0});
+							}
+						} );
+
+					</script>					
+
+				</section>
+
+
+
+
+
+
 			</div>
 		</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
@@ -73,6 +147,7 @@
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'svg-pan-zoom.js' },
+					{ src: 'svg-load.js', condition: function() { return Reveal; } },
 					{ src: 'plugin/chalkboard/chalkboard.js' },
 					{ src: 'plugin/menu/menu.js' },
 					{ src: 'plugin/title-footer/title-footer.js', async: true, callback: function() { title_footer.initialize("UCLA Library DIIT - © UC Regents 2016"); } }
@@ -87,16 +162,6 @@
 			});
 
 		</script>
-		<script>
-			// Don't use window.onLoad like this in production, because it can only listen to one function.
-			window.onload = function() {
-				var panZoomTiger = svgPanZoom('#demo-tiger', {
-					zoomEnabled: true,
-				});
-				panZoomTiger.fit();
-				panZoomTiger.center();
-				panZoomTiger.zoomAtPoint(2.4, {x: 400, y: 0});
-			};
-		</script>
 	</body>
 </html>
+
