@@ -274,6 +274,285 @@ Our focus is currently on end-to-end testing
 				</section>
 
 
+				<!-- Slide 11 -->
+				<!-- Slide 11 -->
+				<!-- Slide 11 -->
+				<section data-state="header1">
+					<h1>More End-to-End</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">What is End-to-End Again?</p>
+					<p style="color:#0070C0;font-size:33px;">
+Testing of the complete application environment in a way that mimics real-world useage such as interacting with the GUI, database and application functionality.
+					</p>
+					<aside class="notes">
+Our focus is currently on end-to-end testing
+					</aside>
+				</section>
+
+
+				<!-- Slide 12 -->
+				<!-- Slide 12 -->
+				<!-- Slide 12 -->
+				<section data-state="header1">
+					<h1>Test Plan</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">Next Step - Test Plan</p>
+					<p style="color:#0070C0;font-size:33px;">
+						The test plan should include:
+						<ul>
+							<li>Scope
+							<li>Features to be tested
+							<li>Features not being tested
+							<li>Metrics
+							<li>Deliverables ... and more!
+						</ul>
+					</p>
+					<aside class="notes">
+ok, a little more theory then we will look more at our end-to-end details
+					</aside>
+				</section>
+
+
+				<!-- Slide 13 -->
+				<!-- Slide 13 -->
+				<!-- Slide 13 -->
+				<section data-state="header1">
+					<h1>STLC Methodology</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">Software Testing Life Cycle</p>
+					<p style="color:#0070C0;font-size:33px;">
+The test plan is part of the STLC. See <a href="https://en.wikipedia.org/wiki/Software_development_process"><b>Software development process</b></a> for more details.
+					</p>
+					<aside class="notes">
+waterfall, agile, spiral and many others
+					</aside>
+				</section>
+
+
+				<!-- Slide 14 -->
+				<!-- Slide 14 -->
+				<!-- Slide 14 -->
+				<section data-state="header1">
+					<h1>Finally, Our Testing</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">What to test?</p>
+					<p style="color:#0070C0;font-size:33px;">
+User story: A plain English description of what a user does, or needs to do, to achieve a specified result.
+					</p>
+					<aside class="notes">
+search example
+					</aside>
+				</section>
+
+
+				<!-- Slide 15 -->
+				<!-- Slide 15 -->
+				<!-- Slide 15 -->
+				<section data-state="header1">
+					<h1>Our Testing S/W</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">End-to-End Testing</p>
+					<p style="color:#0070C0;font-size:66px;">
+						<ul>
+							<li>The Behat framework is at the core
+							<li>Extended with
+								<ul>
+									<li>in-house php coding
+									<li>Laravel framework and GUI
+								</ul>
+						</ul>
+					</p>
+					<aside class="notes">
+Our focus is currently on end-to-end testing
+					</aside>
+				</section>
+
+
+				<!-- Slide 16 -->
+				<!-- Slide 16 -->
+				<!-- Slide 16 -->
+				<section data-state="header1">
+					<h1>Basic Beehat</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">Single User Mode</p>
+					<p style="color:#0070C0;font-size:66px;">
+						<ul>
+							<li>Installed locally
+							<li>Manual configuration
+							<li>Run on the command line
+							<li>Read results from the command line
+						</ul>
+					</p>
+					<aside class="notes">
+...
+					</aside>
+				</section>
+
+
+				<!-- Slide 17 -->
+				<!-- Slide 17 -->
+				<!-- Slide 17 -->
+				<section data-state="header1">
+					<h1>More Basic Beehat</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">Installation</p>
+					<p style="color:#0070C0;font-size:66px;">
+						<ul>
+							<li>PHP 5.3+, Composer, Java, Selenium configuration
+							<li><a href="https://docs.library.ucla.edu/pages/viewpage.action?pageId=148476518">Behat installation instructions</a>
+						</ul>
+					</p>
+					<aside class="notes">
+... Laravel GUI info next talk
+					</aside>
+				</section>
+
+
+				<!-- Slide 18 -->
+				<!-- Slide 18 -->
+				<!-- Slide 18 -->
+				<section data-state="header1">
+					<h1>Giving Beehat Work</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">Simple User Story</p>
+					<p style="color:#0070C0;font-size:44px;">
+						<ul>
+							<li>Feature: Find Library Hours
+							<li>Background:
+								<ul>
+									<li>Given I go to "https://www.library.ucla.edu"
+									<li>Then I follow "Hours"
+									<li>Then the url should match "/hours"
+								</ul>
+						</ul>
+					</p>
+					<aside class="notes">
+... raw story
+					</aside>
+				</section>
+
+
+				<!-- Slide 19 -->
+				<!-- Slide 19 -->
+				<!-- Slide 19 -->
+				<section data-state="header1">
+					<h1>Beehat Output</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">Output for User Story</p>
+					<p style="color:#0070C0;font-size:44px;">
+						<ul>
+							<li>1 scenario (1 passed)
+							<li>3 steps (3 passed)
+							<li>0m8.18s (13.07Mb)
+						</ul>
+					</p>
+					<aside class="notes">
+... notice ~8ms for this simple test - hopefull to run many tests in short time
+					</aside>
+				</section>
+
+
+				<!-- Slide 20 -->
+				<!-- Slide 20 -->
+				<!-- Slide 20 -->
+				<section data-state="header1">
+					<h1>Extended Framework</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">Eases Larger Projects</p>
+					<p style="color:#0070C0;font-size:44px;">
+						<ul>
+							<li>Authoring
+							<li>Execution
+							<li>Reporting
+						</ul>
+					</p>
+					<aside class="notes">
+... with just Behat, everything is manual
+					</aside>
+				</section>
+
+
+				<!-- Slide 21 -->
+				<!-- Slide 21 -->
+				<!-- Slide 21 -->
+				<section data-state="header1">
+					<h1>Authoring</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">Templating</p>
+					<p style="color:#0070C0;font-size:44px;">
+						<ul>
+							<li>Given I go to [/home]
+							<li>Then I follow [/hours_link]
+							<li>Then the url should match [/hours_url]
+						</ul>
+					</p>
+					<aside class="notes">
+... variables
+					</aside>
+				</section>
+
+
+				<!-- Slide 22 -->
+				<!-- Slide 22 -->
+				<!-- Slide 22 -->
+				<section data-state="header1">
+					<h1>Execution</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">GUI</p>
+					<p style="color:#0070C0;font-size:44px;">
+						<ul>
+							<li>Specify groups of tests
+							<li>Individualized config files
+							<li>Results display
+						</ul>
+					</p>
+					<aside class="notes">
+... color coded
+					</aside>
+				</section>
+
+
+				<!-- Slide 23 -->
+				<!-- Slide 23 -->
+				<!-- Slide 23 -->
+				<section data-state="header1">
+					<h1>Reporting</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">MySQL and Jira</p>
+					<p style="color:#0070C0;font-size:44px;">
+						<ul>
+							<li>All results kept in db
+							<li>Select results sent to Jira
+							<li>Summary displayed in Confluence
+						</ul>
+					</p>
+					<aside class="notes">
+... what to archive is still being decided
+					</aside>
+				</section>
+
+
+				<!-- Slide 24 -->
+				<!-- Slide 24 -->
+				<!-- Slide 24 -->
+				<section data-state="header1">
+					<h1>Resources</h1>
+					<hr style="color:#FFC000;background-color:#FFC000;border:1px solid #FFDD77;height:5px;align:top;" />
+					<p style="color:#0070C0;font-size:66px;">Project Documentation</p>
+					<p style="color:#0070C0;font-size:44px;">
+						Available, tidying up in progress
+						<ul>
+							<li><a href="https://docs.library.ucla.edu/display/~darrowco/Testing+and+Automation+-+Pie-charts+of+Tickets">Confluence</a>
+							<li><a href="https://jira.library.ucla.edu/browse/WS-779">Jira</a>
+							<li><a href="https://github.com/UCLALibrary/Testing-Automation/wiki">Github</a>
+						</ul>
+					</p>
+					<aside class="notes">
+...
+					</aside>
+				</section>
+
+
 
 
 
